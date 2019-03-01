@@ -16,9 +16,9 @@
 (defn location->string
   ([location]
    (location->string :latlng location))
-  ([format {:keys [latitude longitude]}]
+  ([fmt {:keys [latitude longitude]}]
    (when (and latitude longitude)
-     (if (= format :latlng)
+     (if (= fmt :latlng)
        (format "%.06f,%.06f" latitude longitude)
        (format "%.06f,%.06f" longitude latitude)))))
 
@@ -28,7 +28,7 @@
   Returns a map with the keys :latitude and :longitude"
   ([loc-string]
    (string->location :latlng loc-string))
-  ([format loc-string]
+  ([fmt loc-string]
    (let [loc-vec   (-> loc-string
                        (cuerdas/split ",")
                        (cuerdas/trim))
