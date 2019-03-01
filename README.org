@@ -3,6 +3,14 @@ Similar utility functions have been implemented across many of sakay's web
 services and clients. This library aims to provide some DRYness and sanity to
 all this.
 
+Because we don't have a private clojars repository, we'll have to use the git
+deps system provided by tools.deps.
+
+* Installation
+#+BEGIN_SRC clojure
+{:deps {sakay-web-utils {:mvn/version "0.1.0"}}}
+#+END_SRC
+
 * Dependencies
 ** time
 [[https://github.com/gfZeng/time.clj]]
