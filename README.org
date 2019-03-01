@@ -4,7 +4,8 @@ services and clients. This library aims to provide some DRYness and sanity to
 all this.
 
 * Dependencies
-** time - https://github.com/gfZeng/time.clj
+** time
+https://github.com/gfZeng/time.clj
 andrewmcveigh's cljs-time was the go-to cljs time library in its day, but with
 the advent of java's new time library and its superiority over jodatime, there
 is no longer any reason to keep using clj-time, and therefore cljs-time loses
