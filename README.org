@@ -3,10 +3,11 @@ Similar utility functions have been implemented across many of sakay's web
 services and clients. This library aims to provide some DRYness and sanity to
 all this.
 
+* Installation
+
 Because we don't have a private clojars repository, we'll have to use the git
 deps system provided by tools.deps.
 
-* Installation
 #+BEGIN_SRC clojure
 {:deps {sakay-web-utils {:git/url "https://gitlab.byimplication.com/sakay/sakay-web-utils"
                          :sha "8c679a027cd070cb04669c31b91d236be8519893"}}}
