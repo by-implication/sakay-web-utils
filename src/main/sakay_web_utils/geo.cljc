@@ -14,9 +14,13 @@
 (s/def ::location (s/keys :req-un [::latitude ::longitude]))
 
 (defn location->string
-  [{:keys [latitude longitude]}]
-  (when (and latitude longitude)
-    (format "%.06f,%.06f" latitude longitude)))
+  ([location]
+   (location->string :latlng location))
+  ([format {:keys [latitude longitude]}]
+   (when (and latitude longitude)
+     (if (= format :latlng)
+       (format "%.06f,%.06f" latitude longitude)
+       (format "%.06f,%.06f" longitude latitude)))))
 
 (defn string->location
   "By default, assumes latlng. Can instead pass a format as a first argument.

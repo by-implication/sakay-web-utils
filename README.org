@@ -9,7 +9,7 @@ Because we don't have a private clojars repository, we'll have to use the git
 deps system provided by tools.deps.
 
 #+BEGIN_SRC clojure
-{:deps {sakay-web-utils {:git/url "https://gitlab.byimplication.com/sakay/sakay-web-utils"
+{:deps {sakay-web-utils {:git/url "https://github.com/by-implication/sakay-web-utils.git"
                          :sha "8c679a027cd070cb04669c31b91d236be8519893"}}}
 #+END_SRC
 
