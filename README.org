@@ -8,7 +8,8 @@ deps system provided by tools.deps.
 
 * Installation
 #+BEGIN_SRC clojure
-{:deps {sakay-web-utils {:mvn/version "0.1.0"}}}
+{:deps {sakay-web-utils {:git/url "https://gitlab.byimplication.com/sakay/sakay-web-utils"
+                         :sha "8c679a027cd070cb04669c31b91d236be8519893"}}}
 #+END_SRC
 
 * Dependencies
