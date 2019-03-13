@@ -1,3 +1,8 @@
-{:deps {time            {:mvn/version "0.4.4"}
-        funcool/cuerdas {:mvn/version "2.0.5"}}
- :paths ["src/main"]}
+{:deps  {time            {:mvn/version "0.4.4"}
+         funcool/cuerdas {:mvn/version "2.0.5"}}
+ :paths ["src"]
+ :aliases
+ {:test-clj {:extra-paths ["test"]
+             :extra-deps  {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner.git"
+                                                      :sha     "cb96e80f6f3d3b307c59cbeb49bb0dcb3a2a780b"}}
+             :main-opts   ["-m" "cognitect.test-runner"]}}}
