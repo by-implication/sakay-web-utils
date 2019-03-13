@@ -16,11 +16,6 @@ deps system provided by tools.deps.
 #+END_SRC
 
 * Dependencies
-** time
-[[https://github.com/gfZeng/time.clj]]
-
-andrewmcveigh's cljs-time was the go-to cljs time library in its day, but with
-the advent of java's new time library and its superiority over jodatime, there
-is no longer any reason to keep using clj-time, and therefore cljs-time loses
-its appeal as a drop-in replacement. gfZeng's time.clj is fully portable and its
-server-side implementation runs off the new java time.
+| name    | url                                | purpose     | explanation                                                            |
+| time    | https://github.com/gfZeng/time.clj | time        | fully portable, compatible with java-time and javascript's native time |
+| cuerdas | https://github.com/funcool/cuerdas | string util | fully portable, features associative string formatting.                |
