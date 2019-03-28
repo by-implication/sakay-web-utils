@@ -101,3 +101,21 @@
   {:pre  [(s/valid? ::period period)]
    :post [(s/valid? ::period %)]}
   (normalize-milliseconds (period->millisecond-period period)))
+
+(defn format-period
+  ([period]
+   (format-period period (fn [value unit]
+                           (let [unit-str (name unit)]
+                             (if (> value 1)
+                               unit-str
+                               (subs unit-str 0 (dec (count unit-str))))))))
+  ([period format-unit]
+   {:pre [(s/valid? ::period period)]}
+   (let [normalized   (normalize period)
+         present-keys (set (keys period))
+         units        (filter present-keys period-units)]
+     (cuerdas/join " "
+                   (map (fn [unit]
+                          (let [value (get period unit)]
+                            (str value " " (format-unit value unit))))
+                        units)))))

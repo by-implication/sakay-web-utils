@@ -25,3 +25,7 @@
   (is (= (periods/normalize {:hours 25}) {:days 1 :hours 1}))
   (is (= (periods/normalize {:days 0.5}) {:hours 12}))
   (is (= (periods/normalize {:hours 1.5 :minutes 30}) {:hours 2})))
+
+(deftest format-period
+  (is (= (periods/format-period {:hours 1 :minutes 5})
+         "1 hour 5 minutes")))
