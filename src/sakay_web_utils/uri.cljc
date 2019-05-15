@@ -14,14 +14,14 @@
   ([query-string parse-keyval]
    (into {}
          (map (fn [keyval-string]
-                (let [[key val] (string/split keyval-string "=")]
+                (let [[key val] (string/split keyval-string #"=")]
                   (parse-keyval key val))))
-         (string/split query-string "&"))))
+         (string/split query-string #"&"))))
 
 (defn query-map->string
   "Converts a map into a query string. Order is not guaranteed."
   [query-map]
   (string/join "&"
                (map (fn [[key val]]
-                      (str (name key) val))
+                      (str (name key) "=" val))
                     query-map)))
