@@ -1,4 +1,4 @@
-[[https://circleci.com/gh/by-implication/sakay-web-utils.svg?style=svg]]
+[[https://circleci.com/gh/by-implication/sakay-web-utils][https://circleci.com/gh/by-implication/sakay-web-utils.svg?style=svg]]
 
 #+TITLE: README
 Similar utility functions have been implemented across many of sakay's web
