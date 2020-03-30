@@ -112,10 +112,10 @@
   ([period format-unit]
    {:pre [(s/valid? ::period period)]}
    (let [normalized   (normalize period)
-         present-keys (set (keys period))
+         present-keys (set (keys normalized))
          units        (filter present-keys period-units)]
      (cuerdas/join " "
                    (map (fn [unit]
-                          (let [value (get period unit)]
+                          (let [value (get normalized unit)]
                             (str value " " (format-unit value unit))))
                         units)))))
